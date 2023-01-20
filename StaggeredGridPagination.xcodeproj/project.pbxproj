@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B3BBD412979D94A0098BC78 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BBD402979D94A0098BC78 /* ImageModel.swift */; };
+		7B5392B5297B2DD100ACC7C4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5392B4297B2DD100ACC7C4 /* SDWebImageSwiftUI */; };
 		7BA6778B29788CDD002CC147 /* StaggeredGridPaginationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6778A29788CDD002CC147 /* StaggeredGridPaginationApp.swift */; };
 		7BA6778D29788CDD002CC147 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6778C29788CDD002CC147 /* ContentView.swift */; };
 		7BA6778F29788CDF002CC147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6778E29788CDF002CC147 /* Assets.xcassets */; };
@@ -17,7 +18,8 @@
 		7BA677A129788CDF002CC147 /* StaggeredGridPaginationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA677A029788CDF002CC147 /* StaggeredGridPaginationTests.swift */; };
 		7BA677AB29788CDF002CC147 /* StaggeredGridPaginationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA677AA29788CDF002CC147 /* StaggeredGridPaginationUITests.swift */; };
 		7BA677AD29788CDF002CC147 /* StaggeredGridPaginationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA677AC29788CDF002CC147 /* StaggeredGridPaginationUITestsLaunchTests.swift */; };
-		7BA677BE29788E04002CC147 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA677BD29788E04002CC147 /* GridView.swift */; };
+		7BA677BE29788E04002CC147 /* CustomGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA677BD29788E04002CC147 /* CustomGridView.swift */; };
+		7BDB9DFC297B26C6008009AB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB9DFB297B26C6008009AB /* ImageFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +53,8 @@
 		7BA677A629788CDF002CC147 /* StaggeredGridPaginationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaggeredGridPaginationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA677AA29788CDF002CC147 /* StaggeredGridPaginationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGridPaginationUITests.swift; sourceTree = "<group>"; };
 		7BA677AC29788CDF002CC147 /* StaggeredGridPaginationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGridPaginationUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7BA677BD29788E04002CC147 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		7BA677BD29788E04002CC147 /* CustomGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGridView.swift; sourceTree = "<group>"; };
+		7BDB9DFB297B26C6008009AB /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5392B5297B2DD100ACC7C4 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +155,7 @@
 		7BA677BA29788DBD002CC147 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7BA677BD29788E04002CC147 /* GridView.swift */,
+				7BA677BD29788E04002CC147 /* CustomGridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +163,7 @@
 		7BA677BC29788DD4002CC147 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7BDB9DFB297B26C6008009AB /* ImageFetcher.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,6 +184,9 @@
 			dependencies = (
 			);
 			name = StaggeredGridPagination;
+			packageProductDependencies = (
+				7B5392B4297B2DD100ACC7C4 /* SDWebImageSwiftUI */,
+			);
 			productName = StaggeredGridPagination;
 			productReference = 7BA6778729788CDD002CC147 /* StaggeredGridPagination.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 7BA6777E29788CDD002CC147;
+			packageReferences = (
+				7B5392B3297B2DD000ACC7C4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 7BA6778829788CDD002CC147 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,7 +308,8 @@
 				7B3BBD412979D94A0098BC78 /* ImageModel.swift in Sources */,
 				7BA6778D29788CDD002CC147 /* ContentView.swift in Sources */,
 				7BA6779729788CDF002CC147 /* StaggeredGridPagination.xcdatamodeld in Sources */,
-				7BA677BE29788E04002CC147 /* GridView.swift in Sources */,
+				7BDB9DFC297B26C6008009AB /* ImageFetcher.swift in Sources */,
+				7BA677BE29788E04002CC147 /* CustomGridView.swift in Sources */,
 				7BA6778B29788CDD002CC147 /* StaggeredGridPaginationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B5392B3297B2DD000ACC7C4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B5392B4297B2DD100ACC7C4 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5392B3297B2DD000ACC7C4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7BA6779529788CDF002CC147 /* StaggeredGridPagination.xcdatamodeld */ = {
